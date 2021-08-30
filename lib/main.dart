@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_furn_app/constants/constant.dart';
 import 'package:my_furn_app/screens/product/products_screen.dart';
 
 void main() {
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'My-func-Store',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryColor: kPrimaryColor,
+        accentColor: kPrimaryColor,
         fontFamily: 'Roboto'
       ),
       home: ProductsScreen(),
