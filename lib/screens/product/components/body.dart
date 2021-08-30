@@ -90,7 +90,9 @@ class ProductCard extends StatelessWidget {
               height: 136.0,
               width: size.width - 200.0,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Spacer(),
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -98,7 +100,23 @@ class ProductCard extends StatelessWidget {
                       'pure classic flower boquet',
                       style: Theme.of(context).textTheme.button,
                     ),
-                  )
+                  ),
+                  Spacer(),
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: kDefaultPadding * 1.5,
+                        vertical: kDefaultPadding / 4),
+                    decoration: BoxDecoration(
+                      color: kSecondaryColor,
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(22.0),
+                          topRight: Radius.circular(22.0)),
+                    ),
+                    child: Text(
+                      "\$50",
+                      style: Theme.of(context).textTheme.button,
+                    ),
+                  ),
                 ],
               ),
             ),
