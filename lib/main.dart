@@ -13,11 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My-func-Store',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: kPrimaryColor,
-        accentColor: kPrimaryColor,
-        fontFamily: 'Roboto'
-      ),
+          primaryColor: kPrimaryColor,
+          fontFamily: 'Roboto',
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+              .copyWith(secondary: kPrimaryColor)),
       home: ProductsScreen(),
     );
   }
